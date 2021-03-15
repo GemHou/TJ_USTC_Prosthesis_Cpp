@@ -43,6 +43,6 @@ int main()
                         b1, b2, b3, (double*)w1, (double*)w2, (double*)w3, x);
         print_list(y, y_size, "y");
     }
-    cout << "Finish...";
+    cout << "Finish......";
     return 0;
 }
