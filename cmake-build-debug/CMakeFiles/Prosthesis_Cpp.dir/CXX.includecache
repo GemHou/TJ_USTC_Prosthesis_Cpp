@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gemhou/Study/Prosthesis_Cpp/list.h
+iostream
+-
+
+/home/gemhou/Study/Prosthesis_Cpp/main.cpp
+iostream
+-
+network.h
+/home/gemhou/Study/Prosthesis_Cpp/network.h
+list.h
+/home/gemhou/Study/Prosthesis_Cpp/list.h
+read_wb.h
+/home/gemhou/Study/Prosthesis_Cpp/read_wb.h
+
+/home/gemhou/Study/Prosthesis_Cpp/network.h
+
+/home/gemhou/Study/Prosthesis_Cpp/read_wb.h
+
