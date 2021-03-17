@@ -12,11 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8274163c-7a34-401f-8939-ad2bff31bdb5" name="Default Changelist" comment="update README.md">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Prosthesis_Cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Prosthesis_Cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +75,7 @@
       <workItem from="1615641700950" duration="16401000" />
       <workItem from="1615776919680" duration="12335000" />
       <workItem from="1615895299741" duration="1810000" />
-      <workItem from="1615987692932" duration="2230000" />
+      <workItem from="1615987692932" duration="2613000" />
     </task>
     <task id="LOCAL-00001" summary="first edition">
       <created>1615644242502</created>
@@ -186,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615989247570</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add the output">
+      <created>1615989956786</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1615989956786</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +222,8 @@
     <MESSAGE value="updata README.md" />
     <MESSAGE value="update README.md" />
     <MESSAGE value="add the input" />
-    <option name="LAST_COMMIT_MESSAGE" value="add the input" />
+    <MESSAGE value="add the output" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the output" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
