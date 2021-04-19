@@ -9414,3 +9414,13 @@ read_wb_18(const double *b1, const double *b2, const double *b3, const double *w
     read_18_w2((double*)w2);
     read_18_w3((double*)w3);
 }
+
+void
+read_wb_15(const double *b1, const double *b2, const double *b3, const double *w1, const double *w2, const double *w3) {
+    read_15_b1((double*)b1);
+    read_15_b2((double*)b2);
+    read_15_b3((double*)b3);
+    read_15_w1((double*)w1);
+    read_15_w2((double*)w2);
+    read_15_w3((double*)w3);
+}
