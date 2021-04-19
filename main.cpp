@@ -71,11 +71,17 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
              input_healthy_hip_pos, input_healthy_hip_vel, input_healthy_knee_pos, input_healthy_knee_vel,
              input_healthy_ankle_pos, input_healthy_ankle_vel, input_prosthesis_feet_contact,
              input_healthy_feet_contact);
-    // print_list(x, x_size, "x");
+    /*
+    double x_test[15] = { 3.93706173e-01, -1.42751545e-01, -5.88504493e-01, -4.27744389e-02,
+    2.41625041e-01, -1.00003362e+00,  1.60651645e-04,  1.00005662e+00,
+    -2.67696538e-04, -9.79019582e-01, -6.69716373e-02, -8.42826307e-01,
+    7.47224968e-03, -1.00889969e+00,  4.22193632e-02};
+    x = x_test;*/
+    //print_list(x, x_size, "x");
 
     network_forward(x_size, x1_size, x2_size, y_size, x1, x2, y,
                     b1, b2, b3, (double*)w1, (double*)w2, (double*)w3, x);
-    // print_list(y, y_size, "y");
+    //print_list(y, y_size, "y");
     output_prosthesis_knee_power = y[1];
     output_prosthesis_ankle_power = y[2];
 }
@@ -104,7 +110,7 @@ int main()
     double output_prosthesis_knee_power;  // -1~1, corresponds to 100% power forward and -100% backward of the motor
     double output_prosthesis_ankle_power;  // -1~1 , corresponds to 100% power forward and -100% backward of the motor
 
-    int x_size = X_SIZE;
+    int x_size = 15;
     int x1_size = 256;
     int x2_size = 256;
     int y_size = 6;
@@ -129,7 +135,7 @@ int main()
     }
     else if(X_SIZE==18)
     {
-        read_wb_18(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
+        read_wb_18((double*)b1, (double*)b2, (double*)b3, (double*)w1, (double*)w2, (double*)w3);
         cout << "X_SIZE==18" << endl;
     }
     else
@@ -177,7 +183,7 @@ int main()
                                         output_prosthesis_ankle_power);
 
         cout << "output_prosthesis_knee_power: " << output_prosthesis_knee_power << endl;  // -1~1, corresponds to 100% power forward and -100% backward of the motor
-        cout << "output_prosthesis_ankle_power: " << output_prosthesis_ankle_power << endl;  // -1~1 , corresponds to 100% power forward and -100% backward of the motor
+        cout << "output_prosthesis_ankle_power: " << output_prosthesis_ankle_power << endl << endl;  // -1~1 , corresponds to 100% power forward and -100% backward of the motor
     }
     cout << "Finish......";
     return 0;
