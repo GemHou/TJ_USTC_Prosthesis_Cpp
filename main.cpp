@@ -99,7 +99,7 @@ int main()
     double w2[x2_size][x1_size];
     double w3[y_size][x2_size];
 
-    read_wb(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
+    read_wb_18(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
 
     // cout << "Start..." << endl;
     for(int loop_i = 0; loop_i < loop_i + 1; loop_i++)  // the "loop_i + 1" can be replaced with a constant

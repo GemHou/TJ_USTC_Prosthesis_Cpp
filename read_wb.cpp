@@ -8,7 +8,7 @@
 #include <iostream>
 #include "read_wb.h"
 
-void read_b1(double *b1) {
+void read_18_b1(double *b1) {
     double b1_raw[256] = {1.3429623,
                       -4.4384747,
                       -2.0519822,
@@ -269,7 +269,7 @@ void read_b1(double *b1) {
     copy_list(b1, b1_raw, 256);
 }
 
-void read_b2(double *b2) {
+void read_18_b2(double *b2) {
     double b2_raw[256] = {
     0.16310485,
             0.0039729928,
@@ -530,7 +530,7 @@ void read_b2(double *b2) {
     copy_list(b2, b2_raw, 256);
 }
 
-void read_b3(double *b3) {
+void read_18_b3(double *b3) {
     double b3_raw[6] = {
     -0.62782824,
             -0.16581166,
@@ -541,7 +541,7 @@ void read_b3(double *b3) {
     copy_list(b3, b3_raw, 256);
 }
 
-void read_w1(double *w1) {
+void read_18_w1(double *w1) {
     double w1_raw[18][256] = {
     {0.6848976, 0.48931718, -2.3705668, 0.31266046, -3.122891, -0.34238842, -0.13842447, -0.6630395, 1.0151479,
             0.07005318, 0.7641633, -0.10492069, -0.21969272, -1.2852137, -1.1297171, -3.0901022, -0.5650551,
@@ -1081,7 +1081,7 @@ void read_w1(double *w1) {
     transform_list((double*)w1_raw, 18, 256, (double*)w1);
 }
 
-void read_w2(double *w2) {
+void read_18_w2(double *w2) {
     double w2_raw[256][256] =
             {
     {-0.48067734, 0.71546245, -0.5838743, -0.4406365, -1.5196624, -1.9007607, 0.45495975, -0.32295582,
@@ -9143,7 +9143,7 @@ void read_w2(double *w2) {
     transform_list((double*)w2_raw, 256, 256, (double*)w2);
 }
 
-void read_w3(double *w3)
+void read_18_w3(double *w3)
 {
     double w3_raw[256][6] = {{-0.18273042, -0.12929465, 0.03372458, 0.037324004, -0.29057276, -0.004212566, },
                              {-0.20369703, 0.02136504, -0.040065926, -0.18897204, 0.12510867, -0.05099408, },
@@ -9406,11 +9406,11 @@ void read_w3(double *w3)
 }
 
 void
-read_wb(const double *b1, const double *b2, const double *b3, const double *w1, const double *w2, const double *w3) {
-    read_b1((double*)b1);
-    read_b2((double*)b2);
-    read_b3((double*)b3);
-    read_w1((double*)w1);
-    read_w2((double*)w2);
-    read_w3((double*)w3);
+read_wb_18(const double *b1, const double *b2, const double *b3, const double *w1, const double *w2, const double *w3) {
+    read_18_b1((double*)b1);
+    read_18_b2((double*)b2);
+    read_18_b3((double*)b3);
+    read_18_w1((double*)w1);
+    read_18_w2((double*)w2);
+    read_18_w3((double*)w3);
 }
