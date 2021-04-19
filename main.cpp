@@ -3,30 +3,53 @@
 #include "list.h"
 #include "read_wb.h"
 
+#define X_SIZE 15
+
 void update_x(double *x, double input_z_p_init_z, double input_vx, double input_vz, double input_pitch,
               double input_prosthesis_hip_pos, double input_prosthesis_hip_vel, double input_prosthesis_knee_pos,
               double input_prosthesis_knee_vel, double input_prosthesis_ankle_pos, double input_prosthesis_ankle_vel,
               double input_healthy_hip_pos, double input_healthy_hip_vel, double input_healthy_knee_pos,
               double input_healthy_knee_vel, double input_healthy_ankle_pos, double input_healthy_ankle_vel,
               double input_prosthesis_feet_contact, double input_healthy_feet_contact) {
-    x[0] = input_z_p_init_z;
-    x[1] = input_vx * 0.3;
-    x[2] = input_vz * 0.3;
-    x[3] = input_pitch;
-    x[4] = (input_prosthesis_hip_pos - (-30)) / (150 - (-30)) * 2 - 1;
-    x[5] = input_prosthesis_hip_vel / (150 - (-30)) * 2;
-    x[6] = (input_prosthesis_knee_pos - (-90)) / (0 - (-90)) * 2 - 1;
-    x[7] = input_prosthesis_knee_vel / (0 - (-90)) * 2;
-    x[8] = (input_prosthesis_ankle_pos - (-45)) / (0 - (-45)) * 2 - 1;
-    x[9] = input_prosthesis_ankle_vel / (0 - (-45)) * 2;
-    x[10] = (input_healthy_hip_pos - (-30)) / (150 - (-30)) * 2 - 1;
-    x[11] = input_healthy_hip_vel / (150 - (-30)) * 2;
-    x[12] = (input_healthy_knee_pos - (-90)) / (0 - (-90)) * 2 - 1;
-    x[13] = input_healthy_knee_vel / (0 - (-90)) * 2;
-    x[14] = (input_healthy_ankle_pos - (-45)) / (0 - (-45)) * 2 - 1;
-    x[15] = input_healthy_ankle_vel / (0 - (-45)) * 2;
-    x[16] = input_prosthesis_feet_contact;
-    x[17] = input_healthy_feet_contact;
+    if(X_SIZE==18)
+    {
+        x[0] = input_z_p_init_z;
+        x[1] = input_vx * 0.3;
+        x[2] = input_vz * 0.3;
+        x[3] = input_pitch;
+        x[4] = (input_prosthesis_hip_pos - (-30)) / (150 - (-30)) * 2 - 1;
+        x[5] = input_prosthesis_hip_vel / (150 - (-30)) * 2;
+        x[6] = (input_prosthesis_knee_pos - (-90)) / (0 - (-90)) * 2 - 1;
+        x[7] = input_prosthesis_knee_vel / (0 - (-90)) * 2;
+        x[8] = (input_prosthesis_ankle_pos - (-45)) / (0 - (-45)) * 2 - 1;
+        x[9] = input_prosthesis_ankle_vel / (0 - (-45)) * 2;
+        x[10] = (input_healthy_hip_pos - (-30)) / (150 - (-30)) * 2 - 1;
+        x[11] = input_healthy_hip_vel / (150 - (-30)) * 2;
+        x[12] = (input_healthy_knee_pos - (-90)) / (0 - (-90)) * 2 - 1;
+        x[13] = input_healthy_knee_vel / (0 - (-90)) * 2;
+        x[14] = (input_healthy_ankle_pos - (-45)) / (0 - (-45)) * 2 - 1;
+        x[15] = input_healthy_ankle_vel / (0 - (-45)) * 2;
+        x[16] = input_prosthesis_feet_contact;
+        x[17] = input_healthy_feet_contact;
+    }
+    else if(X_SIZE==15)
+    {
+        x[0] = input_vx * 0.3;
+        x[1] = input_vz * 0.3;
+        x[2] = input_pitch;
+        x[3] = (input_prosthesis_hip_pos - (-30)) / (150 - (-30)) * 2 - 1;
+        x[4] = input_prosthesis_hip_vel / (150 - (-30)) * 2;
+        x[5] = (input_prosthesis_knee_pos - (-90)) / (0 - (-90)) * 2 - 1;
+        x[6] = input_prosthesis_knee_vel / (0 - (-90)) * 2;
+        x[7] = (input_prosthesis_ankle_pos - (-45)) / (0 - (-45)) * 2 - 1;
+        x[8] = input_prosthesis_ankle_vel / (0 - (-45)) * 2;
+        x[9] = (input_healthy_hip_pos - (-30)) / (150 - (-30)) * 2 - 1;
+        x[10] = input_healthy_hip_vel / (150 - (-30)) * 2;
+        x[11] = (input_healthy_knee_pos - (-90)) / (0 - (-90)) * 2 - 1;
+        x[12] = input_healthy_knee_vel / (0 - (-90)) * 2;
+        x[13] = (input_healthy_ankle_pos - (-45)) / (0 - (-45)) * 2 - 1;
+        x[14] = input_healthy_ankle_vel / (0 - (-45)) * 2;
+    }
 }
 
 void
@@ -81,7 +104,7 @@ int main()
     double output_prosthesis_knee_power;  // -1~1, corresponds to 100% power forward and -100% backward of the motor
     double output_prosthesis_ankle_power;  // -1~1 , corresponds to 100% power forward and -100% backward of the motor
 
-    int x_size = 15;
+    int x_size = X_SIZE;
     int x1_size = 256;
     int x2_size = 256;
     int y_size = 6;
@@ -99,8 +122,21 @@ int main()
     double w2[x2_size][x1_size];
     double w3[y_size][x2_size];
 
-    // read_wb_18(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
-    read_wb_15(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
+    if(X_SIZE==15)
+    {
+        read_wb_15(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
+        cout << "X_SIZE==15" << endl;
+    }
+    else if(X_SIZE==18)
+    {
+        read_wb_18(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
+        cout << "X_SIZE==18" << endl;
+    }
+    else
+    {
+        cout << "X_SIZE unknown" << endl;
+    }
+
 
     // cout << "Start..." << endl;
     for(int loop_i = 0; loop_i < loop_i + 1; loop_i++)  // the "loop_i + 1" can be replaced with a constant

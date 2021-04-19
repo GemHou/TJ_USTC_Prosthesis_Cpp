@@ -10,17 +10,19 @@
 iostream
 -
 
-/home/gemhou/Study/Prosthesis_Cpp/main.cpp
-iostream
--
-network.h
 /home/gemhou/Study/Prosthesis_Cpp/network.h
+
+/home/gemhou/Study/Prosthesis_Cpp/read_wb.cpp
 list.h
 /home/gemhou/Study/Prosthesis_Cpp/list.h
+network.h
+/home/gemhou/Study/Prosthesis_Cpp/network.h
+math.h
+-
+iostream
+-
 read_wb.h
 /home/gemhou/Study/Prosthesis_Cpp/read_wb.h
-
-/home/gemhou/Study/Prosthesis_Cpp/network.h
 
 /home/gemhou/Study/Prosthesis_Cpp/read_wb.h
 
