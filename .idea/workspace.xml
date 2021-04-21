@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8274163c-7a34-401f-8939-ad2bff31bdb5" name="Default Changelist" comment="b weight">
+    <list default="true" id="8274163c-7a34-401f-8939-ad2bff31bdb5" name="Default Changelist" comment="debug: copy_size">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/read_wb.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/read_wb.cpp.o" afterDir="false" />
@@ -51,7 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Prosthesis-control" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,9 +67,9 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -87,7 +87,12 @@
       <workItem from="1615987692932" duration="4618000" />
       <workItem from="1618794527574" duration="1773000" />
       <workItem from="1618796321517" duration="1785000" />
-      <workItem from="1618798135707" duration="843000" />
+      <workItem from="1618798135707" duration="1488000" />
+      <workItem from="1618885891622" duration="895000" />
+      <workItem from="1618898556046" duration="846000" />
+      <workItem from="1618990939280" duration="365000" />
+      <workItem from="1618991686068" duration="3846000" />
+      <workItem from="1618995913612" duration="771000" />
     </task>
     <task id="LOCAL-00001" summary="first edition">
       <created>1615644242502</created>
@@ -236,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618796183819</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="debug: copy_size">
+      <created>1618799001474</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1618799001474</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +286,8 @@
     <MESSAGE value="rename 18" />
     <MESSAGE value="add wb15" />
     <MESSAGE value="b weight" />
-    <option name="LAST_COMMIT_MESSAGE" value="b weight" />
+    <MESSAGE value="debug: copy_size" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug: copy_size" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

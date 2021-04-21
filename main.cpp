@@ -72,11 +72,11 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
              input_healthy_ankle_pos, input_healthy_ankle_vel, input_prosthesis_feet_contact,
              input_healthy_feet_contact);
     /*
-    double x_test[15] = { 3.93706173e-01, -1.42751545e-01, -5.88504493e-01, -4.27744389e-02,
-    2.41625041e-01, -1.00003362e+00,  1.60651645e-04,  1.00005662e+00,
-    -2.67696538e-04, -9.79019582e-01, -6.69716373e-02, -8.42826307e-01,
-    7.47224968e-03, -1.00889969e+00,  4.22193632e-02};
-    x = x_test;*/
+    double x_test[15] = {0.37463641, -0.07057483, -0.37048638, -1.00122511,  0.005649 ,  -0.41734681,
+    -0.0454352,   1.017084 ,   0.00683892,  0.49200886,  0.43692994, -0.83437085,
+    -0.11639355,  0.73816997 , -0.10256796};
+    x = x_test;
+     */
     //print_list(x, x_size, "x");
 
     network_forward(x_size, x1_size, x2_size, y_size, x1, x2, y,
