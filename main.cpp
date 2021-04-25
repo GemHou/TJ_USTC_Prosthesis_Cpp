@@ -71,17 +71,18 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
              input_healthy_hip_pos, input_healthy_hip_vel, input_healthy_knee_pos, input_healthy_knee_vel,
              input_healthy_ankle_pos, input_healthy_ankle_vel, input_prosthesis_feet_contact,
              input_healthy_feet_contact);
-    /*
-    double x_test[15] = {0.37463641, -0.07057483, -0.37048638, -1.00122511,  0.005649 ,  -0.41734681,
-    -0.0454352,   1.017084 ,   0.00683892,  0.49200886,  0.43692994, -0.83437085,
-    -0.11639355,  0.73816997 , -0.10256796};
+    /**/
+    double x_test[15] = {4.31128516e-04,  2.00421109e-05,  1.57289095e-02, -2.97632664e-01,
+ -9.60377452e-04,  3.06139559e-01,  5.28701348e-04,  1.00862288e+00,
+ -2.92510686e-06, -1.61739036e-01, -9.54134972e-04,  3.63214970e-01,
+  3.31424439e-04,  7.72977650e-01,  1.87514263e-04};
     x = x_test;
-     */
-    //print_list(x, x_size, "x");
+
+    print_list(x, x_size, "x");
 
     network_forward(x_size, x1_size, x2_size, y_size, x1, x2, y,
                     b1, b2, b3, (double*)w1, (double*)w2, (double*)w3, x);
-    //print_list(y, y_size, "y");
+    print_list(y, y_size, "y");
     output_prosthesis_knee_power = y[1];
     output_prosthesis_ankle_power = y[2];
 }
@@ -130,7 +131,8 @@ int main()
 
     if(X_SIZE==15)
     {
-        read_wb_15(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
+        // read_wb_15(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
+        read_wb_15_stand(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
         cout << "X_SIZE==15" << endl;
     }
     else if(X_SIZE==18)
