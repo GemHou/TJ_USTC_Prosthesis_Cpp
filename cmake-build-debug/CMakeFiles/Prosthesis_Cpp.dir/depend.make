@@ -13,6 +13,8 @@ CMakeFiles/Prosthesis_Cpp.dir/main.cpp.o: ../read_wb.h
 CMakeFiles/Prosthesis_Cpp.dir/network.cpp.o: ../list.h
 CMakeFiles/Prosthesis_Cpp.dir/network.cpp.o: ../network.cpp
 
+CMakeFiles/Prosthesis_Cpp.dir/read_txt.cpp.o: ../read_txt.cpp
+
 CMakeFiles/Prosthesis_Cpp.dir/read_wb.cpp.o: ../list.h
 CMakeFiles/Prosthesis_Cpp.dir/read_wb.cpp.o: ../network.h
 CMakeFiles/Prosthesis_Cpp.dir/read_wb.cpp.o: ../read_wb.cpp

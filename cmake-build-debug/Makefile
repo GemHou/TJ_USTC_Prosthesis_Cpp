@@ -224,6 +224,33 @@ network.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prosthesis_Cpp.dir/build.make CMakeFiles/Prosthesis_Cpp.dir/network.cpp.s
 .PHONY : network.cpp.s
 
+read_txt.o: read_txt.cpp.o
+
+.PHONY : read_txt.o
+
+# target to build an object file
+read_txt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prosthesis_Cpp.dir/build.make CMakeFiles/Prosthesis_Cpp.dir/read_txt.cpp.o
+.PHONY : read_txt.cpp.o
+
+read_txt.i: read_txt.cpp.i
+
+.PHONY : read_txt.i
+
+# target to preprocess a source file
+read_txt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prosthesis_Cpp.dir/build.make CMakeFiles/Prosthesis_Cpp.dir/read_txt.cpp.i
+.PHONY : read_txt.cpp.i
+
+read_txt.s: read_txt.cpp.s
+
+.PHONY : read_txt.s
+
+# target to generate assembly for a file
+read_txt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prosthesis_Cpp.dir/build.make CMakeFiles/Prosthesis_Cpp.dir/read_txt.cpp.s
+.PHONY : read_txt.cpp.s
+
 read_wb.o: read_wb.cpp.o
 
 .PHONY : read_wb.o
@@ -269,6 +296,9 @@ help:
 	@echo "... network.o"
 	@echo "... network.i"
 	@echo "... network.s"
+	@echo "... read_txt.o"
+	@echo "... read_txt.i"
+	@echo "... read_txt.s"
 	@echo "... read_wb.o"
 	@echo "... read_wb.i"
 	@echo "... read_wb.s"

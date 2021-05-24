@@ -99,6 +99,9 @@
 		<Unit filename="/home/gemhou/Study/Prosthesis_Cpp/network.h">
 			<Option target="Prosthesis_Cpp"/>
 		</Unit>
+		<Unit filename="/home/gemhou/Study/Prosthesis_Cpp/read_txt.cpp">
+			<Option target="Prosthesis_Cpp"/>
+		</Unit>
 		<Unit filename="/home/gemhou/Study/Prosthesis_Cpp/read_wb.cpp">
 			<Option target="Prosthesis_Cpp"/>
 		</Unit>

@@ -6,21 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/gemhou/Study/Prosthesis_Cpp/list.h
+/home/gemhou/Study/Prosthesis_Cpp/read_txt.cpp
 iostream
 -
-
-/home/gemhou/Study/Prosthesis_Cpp/main.cpp
-iostream
+fstream
 -
-network.h
-/home/gemhou/Study/Prosthesis_Cpp/network.h
-list.h
-/home/gemhou/Study/Prosthesis_Cpp/list.h
-read_wb.h
-/home/gemhou/Study/Prosthesis_Cpp/read_wb.h
-
-/home/gemhou/Study/Prosthesis_Cpp/network.h
-
-/home/gemhou/Study/Prosthesis_Cpp/read_wb.h
+cassert
+-
+string
+-
 
