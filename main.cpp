@@ -137,7 +137,7 @@ int main()
     }
     else if(X_SIZE==18)
     {
-        read_wb_18((double*)b1, (double*)b2, (double*)b3, (double*)w1, (double*)w2, (double*)w3);
+        // read_wb_18((double*)b1, (double*)b2, (double*)b3, (double*)w1, (double*)w2, (double*)w3);
         cout << "X_SIZE==18" << endl;
     }
     else
