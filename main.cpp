@@ -34,21 +34,44 @@ void update_x(double *x, double input_z_p_init_z, double input_vx, double input_
     }
     else if(X_SIZE==15)
     {
-        x[0] = input_vx * 0.3;
-        x[1] = input_vz * 0.3;
-        x[2] = input_pitch;
-        x[3] = (input_prosthesis_hip_pos - (-30)) / (150 - (-30)) * 2 - 1;
-        x[4] = input_prosthesis_hip_vel / (150 - (-30)) * 2;
-        x[5] = (input_prosthesis_knee_pos - (-90)) / (0 - (-90)) * 2 - 1;
-        x[6] = input_prosthesis_knee_vel / (0 - (-90)) * 2;
-        x[7] = (input_prosthesis_ankle_pos - (-45)) / (0 - (-45)) * 2 - 1;
-        x[8] = input_prosthesis_ankle_vel / (0 - (-45)) * 2;
-        x[9] = (input_healthy_hip_pos - (-30)) / (150 - (-30)) * 2 - 1;
-        x[10] = input_healthy_hip_vel / (150 - (-30)) * 2;
-        x[11] = (input_healthy_knee_pos - (-90)) / (0 - (-90)) * 2 - 1;
-        x[12] = input_healthy_knee_vel / (0 - (-90)) * 2;
-        x[13] = (input_healthy_ankle_pos - (-45)) / (0 - (-45)) * 2 - 1;
-        x[14] = input_healthy_ankle_vel / (0 - (-45)) * 2;
+        double x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14;
+        double hip_up = +60;
+        double hip_low = -30;
+        double knee_up = 0;
+        double knee_low = -75;
+        double ankle_up = 25;
+        double ankle_low = -45;
+        x0 = input_vx * 0.3;
+        x1 = input_vz * 0.3;
+        x2 = input_pitch;
+        x3 = (input_prosthesis_hip_pos - hip_low) / (hip_up - hip_low) * 2 - 1;
+        x4 = input_prosthesis_hip_vel / (hip_up - hip_low) * 2;
+        x5 = (input_prosthesis_knee_pos - knee_low) / (knee_up - knee_low) * 2 - 1;
+        x6 = input_prosthesis_knee_vel / (knee_up - knee_low) * 2;
+        x7 = (input_prosthesis_ankle_pos - ankle_low) / (ankle_up - ankle_low) * 2 - 1;
+        x8 = input_prosthesis_ankle_vel / (ankle_up - ankle_low) * 2;
+        x9 = (input_healthy_hip_pos - hip_low) / (hip_up - hip_low) * 2 - 1;
+        x10 = input_healthy_hip_vel / (hip_up - hip_low) * 2;
+        x11 = (input_healthy_knee_pos - knee_low) / (knee_up - knee_low) * 2 - 1;
+        x12 = input_healthy_knee_vel / (knee_up - knee_low) * 2;
+        x13 = (input_healthy_ankle_pos - ankle_low) / (ankle_up - ankle_low) * 2 - 1;
+        x14 = input_healthy_ankle_vel / (ankle_up - ankle_low) * 2;
+
+        x[0] = x0;
+        x[1] = x1;
+        x[2] = x2;
+        x[3] = x3;
+        x[4] = x4;
+        x[5] = x5;
+        x[6] = x6;
+        x[7] = x7;
+        x[8] = x8;
+        x[9] = x9;
+        x[10] = x10;
+        x[11] = x11;
+        x[12] = x12;
+        x[13] = x13;
+        x[14] = x14;
     }
 }
 
@@ -150,9 +173,9 @@ int main()
 
         // ------ please update the sensor information here ------
         input_z_p_init_z = -0.06;  // for example, unit: meters, positive direction: up
-        input_vx = 0.6;  // unit: meters/second, positive direction: forward
+        input_vx = 0;  // unit: meters/second, positive direction: forward
         input_vz = 0;  // unit: meters/second, positive direction: up
-        input_pitch = -0.3;  // unit: radians, positive direction: forward
+        input_pitch = -0.04;  // unit: radians, positive direction: forward
         input_prosthesis_hip_pos = 0;  // unit: degree, positive direction: forward
         input_prosthesis_hip_vel = 0;  // unit: degree/second, positive direction: forward
         input_prosthesis_knee_pos = 0;  // unit: degree, positive direction: forward
