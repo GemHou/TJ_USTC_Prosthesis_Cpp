@@ -123,23 +123,10 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
              input_healthy_hip_pos, input_healthy_hip_vel, input_healthy_knee_pos, input_healthy_knee_vel,
              input_healthy_ankle_pos, input_healthy_ankle_vel, input_prosthesis_feet_contact,
              input_healthy_feet_contact);
+
     /*
-    double x_test[15] = { 0.0069542839191854 ,
-                          0.01652679033577442 ,
-                          -0.041296642273664474 ,
-                          -0.996933102607727 ,
-                          0.003369022160768509 ,
-                          1.0198657512664795 ,
-                          -0.012619017623364925 ,
-                          1.0212688446044922 ,
-                          -0.013889503665268421 ,
-                          0.22839857637882233 ,
-                          -0.085178904235363 ,
-                          -0.22689631581306458 ,
-                          0.1583538055419922 ,
-                          0.7940875291824341 ,
-                          0.03594062104821205 ,
-                          };
+    double x_test[9] = {-0.33494863, -0.99935585,  0.00264245,  0.6120887,  -0.01350017,  1.0091658,
+    0.00995679, -0.2978705,   0.00570622};
     x = x_test;*/
 
     print_list(x, x_size, "x");
@@ -224,7 +211,7 @@ int main()
         input_z_p_init_z = -0.06;  // for example, unit: meters, positive direction: up
         input_vx = 0;  // unit: meters/second, positive direction: forward
         input_vz = 0;  // unit: meters/second, positive direction: up
-        input_pitch = -0.04;  // unit: radians, positive direction: forward
+        input_pitch = -1;  // unit: radians, positive direction: forward
         input_prosthesis_hip_pos = 0;  // unit: degree, positive direction: forward
         input_prosthesis_hip_vel = 0;  // unit: degree/second, positive direction: forward
         input_prosthesis_knee_pos = 0;  // unit: degree, positive direction: forward
