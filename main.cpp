@@ -147,8 +147,8 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
     network_forward(x_size, x1_size, x2_size, y_size, x1, x2, y,
                     b1, b2, b3, (double*)w1, (double*)w2, (double*)w3, x);
     print_list(y, y_size, "y");
-    output_prosthesis_knee_position = y[1];
-    output_prosthesis_ankle_position = y[2];
+    output_prosthesis_knee_position = y[0];
+    output_prosthesis_ankle_position = y[1];
 }
 
 int main()
