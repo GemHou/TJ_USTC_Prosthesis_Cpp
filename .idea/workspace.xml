@@ -11,8 +11,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8274163c-7a34-401f-8939-ad2bff31bdb5" name="Default Changelist" comment="improve: the update_x function">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8274163c-7a34-401f-8939-ad2bff31bdb5" name="Default Changelist" comment="try">
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/read_wb.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/read_wb.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Prosthesis_Cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Prosthesis_Cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_wb.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/read_wb.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_wb.h" beforeDir="false" afterPath="$PROJECT_DIR$/read_wb.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +102,7 @@
       <workItem from="1619346958840" duration="940000" />
       <workItem from="1621844224710" duration="5974000" />
       <workItem from="1622787464012" duration="3851000" />
+      <workItem from="1623155539328" duration="1943000" />
     </task>
     <task id="LOCAL-00001" summary="first edition">
       <created>1615644242502</created>
@@ -314,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622791116689</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="try">
+      <created>1623155724293</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1623155724293</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +347,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="complete the net forward" />
     <MESSAGE value="copy the weights" />
     <MESSAGE value="refactor" />
     <MESSAGE value="refactor the wb" />
@@ -358,20 +371,26 @@
     <MESSAGE value="improve: update the stand weight" />
     <MESSAGE value="improve: replace the power by position" />
     <MESSAGE value="improve: the update_x function" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve: the update_x function" />
+    <MESSAGE value="try" />
+    <option name="LAST_COMMIT_MESSAGE" value="try" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>100</line>
-          <option name="timeStamp" value="8" />
+          <line>118</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>43</line>
-          <option name="timeStamp" value="11" />
+          <line>209</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>208</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

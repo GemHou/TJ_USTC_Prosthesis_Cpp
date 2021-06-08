@@ -3,7 +3,7 @@
 #include "list.h"
 #include "read_wb.h"
 
-#define X_SIZE 15
+#define X_SIZE 9
 
 void update_x(double *x, double input_z_p_init_z, double input_vx, double input_vz, double input_pitch,
               double input_prosthesis_hip_pos, double input_prosthesis_hip_vel, double input_prosthesis_knee_pos,
@@ -73,6 +73,35 @@ void update_x(double *x, double input_z_p_init_z, double input_vx, double input_
         x[13] = x13;
         x[14] = x14;
     }
+    else if(X_SIZE==9)
+    {
+        double x0, x1, x2, x3, x4, x5, x6, x7, x8;
+        double hip_up = +60;
+        double hip_low = -30;
+        double knee_up = 0;
+        double knee_low = -75;
+        double ankle_up = 25;
+        double ankle_low = -45;
+        x0 = input_pitch;
+        x1 = (input_prosthesis_hip_pos - hip_low) / (hip_up - hip_low) * 2 - 1;
+        x2 = input_prosthesis_hip_vel / (hip_up - hip_low) * 2;
+        x3 = (input_prosthesis_knee_pos - knee_low) / (knee_up - knee_low) * 2 - 1;
+        x4 = input_prosthesis_knee_vel / (knee_up - knee_low) * 2;
+        x5 = (input_prosthesis_ankle_pos - ankle_low) / (ankle_up - ankle_low) * 2 - 1;
+        x6 = input_prosthesis_ankle_vel / (ankle_up - ankle_low) * 2;
+        x7 = (input_healthy_hip_pos - hip_low) / (hip_up - hip_low) * 2 - 1;
+        x8 = input_healthy_hip_vel / (hip_up - hip_low) * 2;
+
+        x[0] = x0;
+        x[1] = x1;
+        x[2] = x2;
+        x[3] = x3;
+        x[4] = x4;
+        x[5] = x5;
+        x[6] = x6;
+        x[7] = x7;
+        x[8] = x8;
+    }
 }
 
 void
@@ -94,7 +123,7 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
              input_healthy_hip_pos, input_healthy_hip_vel, input_healthy_knee_pos, input_healthy_knee_vel,
              input_healthy_ankle_pos, input_healthy_ankle_vel, input_prosthesis_feet_contact,
              input_healthy_feet_contact);
-    /**/
+    /*
     double x_test[15] = { 0.0069542839191854 ,
                           0.01652679033577442 ,
                           -0.041296642273664474 ,
@@ -111,7 +140,7 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
                           0.7940875291824341 ,
                           0.03594062104821205 ,
                           };
-    x = x_test;
+    x = x_test;*/
 
     print_list(x, x_size, "x");
 
@@ -146,10 +175,10 @@ int main()
     double output_prosthesis_knee_position;  // -1~1, corresponds to 100% position forward and -100% backward of the motor
     double output_prosthesis_ankle_position;  // -1~1 , corresponds to 100% position forward and -100% backward of the motor
 
-    int x_size = 15;
+    int x_size = X_SIZE;
     int x1_size = 256;
     int x2_size = 256;
-    int y_size = 6;
+    int y_size = 2;
 
     double x[x_size];  //  = {0.0, 0.0, 0.0, -0.0, -0.6860127449035645, 0.0, 0.9540787935256958, 0.0,
     // 0.19549477100372314, 0.0, -0.6937729120254517, 0.0, 1.0145938396453857, 0.0, 0.2897615134716034, 0.0, 0.0, 0.0}
@@ -174,6 +203,11 @@ int main()
     {
         // read_wb_18((double*)b1, (double*)b2, (double*)b3, (double*)w1, (double*)w2, (double*)w3);
         cout << "X_SIZE==18" << endl;
+    }
+    else if(X_SIZE==9)
+    {
+        read_wb_9((double*)b1, (double*)b2, (double*)b3, (double*)w1, (double*)w2, (double*)w3);
+        cout << "X_SIZE==9" << endl;
     }
     else
     {
