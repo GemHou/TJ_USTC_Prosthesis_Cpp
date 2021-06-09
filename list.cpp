@@ -11,12 +11,15 @@ using namespace std;
 
 void multiple_list(double *x, int x_size, double *w, int y_size, double *y)
 {
+    double ww, xi;
     for(int j=0; j < y_size; j++)
     {
         y[j] = 0;
         for (int i = 0; i < x_size; i++)
         {
-            y[j] += w[j*x_size+i] * x[i];
+            ww = w[j*x_size+i];
+            xi = x[i];
+            y[j] += ww * xi;
         }
     }
 }

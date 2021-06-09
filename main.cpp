@@ -124,10 +124,9 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
              input_healthy_ankle_pos, input_healthy_ankle_vel, input_prosthesis_feet_contact,
              input_healthy_feet_contact);
 
-    /*
-    double x_test[9] = {-0.33494863, -0.99935585,  0.00264245,  0.6120887,  -0.01350017,  1.0091658,
-    0.00995679, -0.2978705,   0.00570622};
-    x = x_test;*/
+    /**/
+    double x_test[9] = {1, 0, 0, 0, 0, 0, 0, 0, 0,};
+    x = x_test;
 
     print_list(x, x_size, "x");
 
