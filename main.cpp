@@ -124,17 +124,17 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
              input_healthy_ankle_pos, input_healthy_ankle_vel, input_prosthesis_feet_contact,
              input_healthy_feet_contact);
 
-    /**/
+    /*
     double x_test[9] = {1, 0, 0, 0, 0, 0, 0, 0, 0,};
-    x = x_test;
+    x = x_test;*/
 
     print_list(x, x_size, "x");
 
     network_forward(x_size, x1_size, x2_size, y_size, x1, x2, y,
                     b1, b2, b3, (double*)w1, (double*)w2, (double*)w3, x);
     print_list(y, y_size, "y");
-    output_prosthesis_knee_position = y[0];
-    output_prosthesis_ankle_position = y[1];
+    output_prosthesis_knee_position = 0.6 + y[0] * 0.1;
+    output_prosthesis_ankle_position = 0.5 + y[1] * 0.1;
 }
 
 int main()
@@ -207,10 +207,10 @@ int main()
         // cout << "iteration: " << loop_i << endl;
 
         // ------ please update the sensor information here ------
-        input_z_p_init_z = -0.06;  // for example, unit: meters, positive direction: up
-        input_vx = 0;  // unit: meters/second, positive direction: forward
-        input_vz = 0;  // unit: meters/second, positive direction: up
-        input_pitch = -1;  // unit: radians, positive direction: forward
+        input_z_p_init_z = -0.06;  // for example, unit: meters, positive direction: up ----------- can be neglected ----------
+        input_vx = 0;  // unit: meters/second, positive direction: forward ----------- can be neglected ----------
+        input_vz = 0;  // unit: meters/second, positive direction: up ----------- can be neglected ----------
+        input_pitch = -0.04;  // unit: radians, positive direction: forward
         input_prosthesis_hip_pos = 0;  // unit: degree, positive direction: forward
         input_prosthesis_hip_vel = 0;  // unit: degree/second, positive direction: forward
         input_prosthesis_knee_pos = 0;  // unit: degree, positive direction: forward
@@ -219,12 +219,12 @@ int main()
         input_prosthesis_ankle_vel = 0;  // unit: degree/second, positive direction: up
         input_healthy_hip_pos = 0;  // unit: degree, positive direction: forward
         input_healthy_hip_vel = 0;  // unit: degree/second, positive direction: forward
-        input_healthy_knee_pos = 0;  // unit: degree, positive direction: forward
-        input_healthy_knee_vel = 0;  // unit: degree/second, positive direction: forward
-        input_healthy_ankle_pos = 0;  // unit: degree, positive direction: up
-        input_healthy_ankle_vel = 0;  // unit: degree/second, positive direction: up
-        input_prosthesis_feet_contact = 1;  // 1: foot touching, 0: no touching
-        input_healthy_feet_contact = 1;  // 1: foot touching, 0: no touching
+        input_healthy_knee_pos = 0;  // unit: degree, positive direction: forward ----------- can be neglected ----------
+        input_healthy_knee_vel = 0;  // unit: degree/second, positive direction: forward ----------- can be neglected ----------
+        input_healthy_ankle_pos = 0;  // unit: degree, positive direction: up ----------- can be neglected ----------
+        input_healthy_ankle_vel = 0;  // unit: degree/second, positive direction: up ----------- can be neglected ----------
+        input_prosthesis_feet_contact = 1;  // 1: foot touching, 0: no touching ----------- can be neglected ----------
+        input_healthy_feet_contact = 1;  // 1: foot touching, 0: no touching ----------- can be neglected ----------
         // ------ ------
 
         reinforcement_learning_decision(x_size, x1_size, x2_size, y_size, x, input_z_p_init_z, input_vx, input_vz,
