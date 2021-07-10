@@ -4,7 +4,7 @@
 #include "read_wb.h"
 
 #define X_SIZE 9
-#define OUTPUT_MODE "Position"  // Torque  Position
+#define OUTPUT_MODE "Torque"  // Torque  Position
 
 void update_x(double *x, double input_z_p_init_z, double input_vx, double input_vz, double input_pitch,
               double input_prosthesis_hip_pos, double input_prosthesis_hip_vel, double input_prosthesis_knee_pos,
@@ -194,7 +194,7 @@ int main()
     if(X_SIZE==15)
     {
         // read_wb_15(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
-        read_wb_15_stand(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
+        // read_wb_15_stand(b1, b2, b3, (double*)w1, (double*)w2, (double*)w3);
         cout << "X_SIZE==15" << endl;
     }
     else if(X_SIZE==18)

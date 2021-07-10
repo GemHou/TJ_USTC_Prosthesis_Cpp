@@ -11,13 +11,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8274163c-7a34-401f-8939-ad2bff31bdb5" name="Default Changelist" comment="improve: add the torque and position mode">
+    <list default="true" id="8274163c-7a34-401f-8939-ad2bff31bdb5" name="Default Changelist" comment="improve: delete 15">
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/read_wb.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/read_wb.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Prosthesis_Cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Prosthesis_Cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read_wb.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/read_wb.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_wb.h" beforeDir="false" afterPath="$PROJECT_DIR$/read_wb.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,7 @@
       <workItem from="1621844224710" duration="5974000" />
       <workItem from="1622787464012" duration="3851000" />
       <workItem from="1623155539328" duration="5207000" />
-      <workItem from="1625902963870" duration="1135000" />
+      <workItem from="1625902963870" duration="2012000" />
     </task>
     <task id="LOCAL-00001" summary="first edition">
       <created>1615644242502</created>
@@ -360,7 +360,21 @@
       <option name="project" value="LOCAL" />
       <updated>1625903535329</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="improve: read_wb_9_torque_walk">
+      <created>1625905373196</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1625905373196</updated>
+    </task>
+    <task id="LOCAL-00039" summary="improve: delete 15">
+      <created>1625905425605</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1625905425605</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,8 +393,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor main" />
-    <MESSAGE value="improve" />
     <MESSAGE value="finish" />
     <MESSAGE value="updata README.md" />
     <MESSAGE value="add the input" />
@@ -404,7 +416,9 @@
     <MESSAGE value="improve: find the abs bug" />
     <MESSAGE value="improve: 9-2 model" />
     <MESSAGE value="improve: add the torque and position mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve: add the torque and position mode" />
+    <MESSAGE value="improve: read_wb_9_torque_walk" />
+    <MESSAGE value="improve: delete 15" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve: delete 15" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
