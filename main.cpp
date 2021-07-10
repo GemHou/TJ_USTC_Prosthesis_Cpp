@@ -4,6 +4,7 @@
 #include "read_wb.h"
 
 #define X_SIZE 9
+#define OUTPUT_MODE "Torque"  // Torque  Position
 
 void update_x(double *x, double input_z_p_init_z, double input_vx, double input_vz, double input_pitch,
               double input_prosthesis_hip_pos, double input_prosthesis_hip_vel, double input_prosthesis_knee_pos,
@@ -115,7 +116,7 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
                                 double input_healthy_ankle_vel, double input_prosthesis_feet_contact,
                                 double input_healthy_feet_contact, double *x1, double *x2, double *y, double *b1,
                                 double *b2, double *b3, const double *w1, const double *w2, const double *w3,
-                                double &output_prosthesis_knee_position, double &output_prosthesis_ankle_position) {
+                                double &output_prosthesis_knee, double &output_prosthesis_ankle) {
     update_x(x, input_z_p_init_z, input_vx, input_vz, input_pitch, input_prosthesis_hip_pos,
              input_prosthesis_hip_vel,
              input_prosthesis_knee_pos, input_prosthesis_knee_vel, input_prosthesis_ankle_pos,
@@ -133,8 +134,19 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
     network_forward(x_size, x1_size, x2_size, y_size, x1, x2, y,
                     b1, b2, b3, (double*)w1, (double*)w2, (double*)w3, x);
     print_list(y, y_size, "y");
-    output_prosthesis_knee_position = 0.6 + y[0] * 0.1;
-    output_prosthesis_ankle_position = 0.5 + y[1] * 0.1;
+    if(OUTPUT_MODE=="Position") {
+        output_prosthesis_knee = 0.6 + y[0] * 0.1;
+        output_prosthesis_ankle = 0.5 + y[1] * 0.1;
+    }
+    else if(OUTPUT_MODE=="Torque")
+    {
+        output_prosthesis_knee = y[0];
+        output_prosthesis_ankle = y[1];
+    }
+    else
+    {
+        cout << "Unknown OUTPUT_MODE!!!!!!!!!!!!" << endl;
+    }
 }
 
 int main()
@@ -158,8 +170,8 @@ int main()
     double input_prosthesis_feet_contact;
     double input_healthy_feet_contact;
 
-    double output_prosthesis_knee_position;  // -1~1, corresponds to 100% position forward and -100% backward of the motor
-    double output_prosthesis_ankle_position;  // -1~1 , corresponds to 100% position forward and -100% backward of the motor
+    double output_prosthesis_knee;  // -1~1, corresponds to 100% position forward and -100% backward of the motor
+    double output_prosthesis_ankle;  // -1~1 , corresponds to 100% position forward and -100% backward of the motor
 
     int x_size = X_SIZE;
     int x1_size = 256;
@@ -197,7 +209,7 @@ int main()
     }
     else
     {
-        cout << "X_SIZE unknown" << endl;
+        cout << "X_SIZE unknown!!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;
     }
 
 
@@ -236,11 +248,24 @@ int main()
                                         input_healthy_knee_vel, input_healthy_ankle_pos, input_healthy_ankle_vel,
                                         input_prosthesis_feet_contact,
                                         input_healthy_feet_contact, x1, x2, y, b1, b2, b3, (double*)w1, (double*)w2, (double*)w3,
-                                        output_prosthesis_knee_position,
-                                        output_prosthesis_ankle_position);
+                                        output_prosthesis_knee,
+                                        output_prosthesis_ankle);
 
-        cout << "output_prosthesis_knee_position: " << output_prosthesis_knee_position << endl;  // -1~1, corresponds to 100% position forward and -100% backward of the motor
-        cout << "output_prosthesis_ankle_position: " << output_prosthesis_ankle_position << endl << endl;  // -1~1 , corresponds to 100% position forward and -100% backward of the motor
+        if(OUTPUT_MODE=="Position")
+        {
+            cout << "output_prosthesis_knee_position: " << output_prosthesis_knee << endl;  // -1~1, corresponds to 100% position forward and -100% backward of the motor
+            cout << "output_prosthesis_ankle_position: " << output_prosthesis_ankle << endl << endl;  // -1~1 , corresponds to 100% position forward and -100% backward of the motor
+        }
+        else if(OUTPUT_MODE=="Torque")
+        {
+            cout << "output_prosthesis_knee_torque: " << output_prosthesis_knee << endl;  // -1~1, corresponds to 100% torque forward and -100% backward of the motor
+            cout << "output_prosthesis_ankle_torque: " << output_prosthesis_ankle << endl << endl;  // -1~1 , corresponds to 100% torque forward and -100% backward of the motor
+        }
+        else
+        {
+            cout << "Unknown OUTPUT_MODE!!!!!!!!!!!!" << endl;
+        }
+
     }
     cout << "Finish......";
     return 0;
