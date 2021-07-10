@@ -4,7 +4,7 @@
 #include "read_wb.h"
 
 #define X_SIZE 9
-#define OUTPUT_MODE "Torque"  // Torque  Position
+#define OUTPUT_MODE "Position"  // Torque  Position
 
 void update_x(double *x, double input_z_p_init_z, double input_vx, double input_vz, double input_pitch,
               double input_prosthesis_hip_pos, double input_prosthesis_hip_vel, double input_prosthesis_knee_pos,
@@ -204,7 +204,13 @@ int main()
     }
     else if(X_SIZE==9)
     {
-        read_wb_9((double*)b1, (double*)b2, (double*)b3, (double*)w1, (double*)w2, (double*)w3);
+        if(OUTPUT_MODE=="Position")
+            read_wb_9_position_stand((double*)b1, (double*)b2, (double*)b3, (double*)w1, (double*)w2, (double*)w3);
+        else if(OUTPUT_MODE=="Torque")
+            read_wb_9_torque_walk((double*)b1, (double*)b2, (double*)b3, (double*)w1, (double*)w2, (double*)w3);
+        else
+            cout << "Unknown OUTPUT_MODE!!!!!!!!!!!!" << endl;
+
         cout << "X_SIZE==9" << endl;
     }
     else
