@@ -126,7 +126,7 @@ reinforcement_learning_decision(int x_size, int x1_size, int x2_size, int y_size
              input_healthy_feet_contact);
 
     /*
-    double x_test[9] = {1, 0, 0, 0, 0, 0, 0, 0, 0,};
+    double x_test[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0,};
     x = x_test;*/
 
     print_list(x, x_size, "x");

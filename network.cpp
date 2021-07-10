@@ -52,13 +52,13 @@ void network_forward(int x_size, int x1_size, int x2_size, int y_size, double *x
                      double *b2, double *b3, const double *w1, const double *w2, const double *w3, double *x) {
     multiple_list(x, x_size, (double*)w1, x1_size, x1);
     add_list(b1, x1_size, x1);
-    // relu_list(x1, x1_size);
-    print_list(x1, x1_size, "x1");
+    relu_list(x1, x1_size);
+    // print_list(x1, x1_size, "x1");
 
     multiple_list(x1, x1_size, (double*)w2, x2_size, x2);
     add_list(b2, x2_size, x2);
     relu_list(x2, x2_size);
-    print_list(x2, x2_size, "x2");
+    // print_list(x2, x2_size, "x2");
 
     multiple_list(x2, x2_size, (double*)w3, y_size, y);
     add_list(b3, y_size, y);

@@ -11,12 +11,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8274163c-7a34-401f-8939-ad2bff31bdb5" name="Default Changelist" comment="improve: delete 15">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/main.cpp.o" afterDir="false" />
+    <list default="true" id="8274163c-7a34-401f-8939-ad2bff31bdb5" name="Default Changelist" comment="improve: read_9_b1_torque_walk">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/network.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/network.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/read_wb.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prosthesis_Cpp.dir/read_wb.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Prosthesis_Cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Prosthesis_Cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/network.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read_wb.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/read_wb.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,11 +70,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -99,7 +96,8 @@
       <workItem from="1621844224710" duration="5974000" />
       <workItem from="1622787464012" duration="3851000" />
       <workItem from="1623155539328" duration="5207000" />
-      <workItem from="1625902963870" duration="2012000" />
+      <workItem from="1625902963870" duration="2271000" />
+      <workItem from="1625905832092" duration="1307000" />
     </task>
     <task id="LOCAL-00001" summary="first edition">
       <created>1615644242502</created>
@@ -374,7 +372,21 @@
       <option name="project" value="LOCAL" />
       <updated>1625905425605</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="improve: read_9_b1_position_stand">
+      <created>1625905535355</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1625905535355</updated>
+    </task>
+    <task id="LOCAL-00041" summary="improve: read_9_b1_torque_walk">
+      <created>1625905793019</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1625905793019</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,8 +405,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="finish" />
-    <MESSAGE value="updata README.md" />
     <MESSAGE value="add the input" />
     <MESSAGE value="add the output" />
     <MESSAGE value="update README.md" />
@@ -418,7 +428,9 @@
     <MESSAGE value="improve: add the torque and position mode" />
     <MESSAGE value="improve: read_wb_9_torque_walk" />
     <MESSAGE value="improve: delete 15" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve: delete 15" />
+    <MESSAGE value="improve: read_9_b1_position_stand" />
+    <MESSAGE value="improve: read_9_b1_torque_walk" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve: read_9_b1_torque_walk" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
